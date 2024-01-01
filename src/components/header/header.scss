@@ -1,0 +1,34 @@
+.header {
+	background-color: #20222a;
+	height: 72px;
+	border-bottom: 1px solid #272e3b;
+
+    &__items { 
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        align-items: center;
+        &--left { 
+            gap: 139px;
+        }
+    }
+    
+    &__information {
+        gap: 32px;
+        &__item {  
+            font-family: Rubik;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+
+    &__buttons { 
+        gap: 24px;
+    }
+}
+ 
