@@ -39,5 +39,5 @@ const Header = () => {
 };
 
 // COMMENT FINISH button lang list arrow
-
+// COMMENTthink to change header semantics
 export default Header;
