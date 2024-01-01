@@ -14,5 +14,7 @@ const MainPage = () => {
 
     );
 }
-// COMMENT change "main" display to flex and align "Header", "Promo", "Footer" by align-self
+// COMMENT change "main" display to flex 
+// and align "Header", "Promo", "Footer" 
+// by align-self
 export default MainPage;
