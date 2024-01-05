@@ -1,4 +1,23 @@
-.button {
+:root { 
+    --textColor: #000;
+    --yellow:  #EBD96B;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 500;
+  }
+
+  .container {
+    padding: 0 16px;
+    max-width: 1256px;
+    margin: 0  auto;
+    height: 100%; 
+  }
+  
+  .button {
 	text-align: center;
 	padding: 10px 24px;
 	border-radius: 48px;
