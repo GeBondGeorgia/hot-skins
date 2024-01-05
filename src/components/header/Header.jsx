@@ -9,32 +9,32 @@ const Header = () => {
 	return (
 		<div className="header">
 			<div className="container">
-				<ul className="header__items">
-					<li className="header__item header__item--left">
-						{
-                            // eslint-disable-next-line jsx-a11y/anchor-is-valid
-						}<a href="#" className="header__logo">
+				<div className="header__wrapper">
+					<div className="nav">
+						<a href="#!" className="logo">
 							<img src={logo} alt="logo" />
 						</a>
-						<ul className="header__information">
-							<li className="information__item">Помощь</li>
-							<li className="information__item">Контакты</li>
+
+						<ul className="nav__list">
+							<li className="nav__item medium">Помощь</li>
+							<li className="nav__item medium">Контакты</li>
 						</ul>
-					</li>
-					<li className="header__item header__buttons">
-						<button className="button--list">
-							<div>
-								<img src={lang} alt="lang" />
-							</div>
+					</div>
+
+					<div className="header__buttons">
+						<button className="header__button--list header__button button button--list medium">
+							<img src={lang} alt="lang" />
 							RU
-							{/* <div className="arrow arrow--down"></div> */}
-							<img src={arrow} alt="arrow" />
+							<img src={arrow} alt="" />
 						</button>
-						<button className="button">Войти</button>
-					</li>
-				</ul>
+						<a href="#!" className="button">
+							Войти
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
+
 	);
 };
 

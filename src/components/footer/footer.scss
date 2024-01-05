@@ -10,19 +10,16 @@
     border-top: 1px solid #272E3B;
 
     &__wrapper { 
+        height: 100%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 50%;
-        transform: translateY(50%);
+        align-items: center;
     }
     &__item  {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
         color: rgba(255, 255, 255, 0.50);
     }
     &__items {
-        display: flexbox;
-        gap: 32px;
+        display: flex;
+        column-gap: 32px;
     }
 }

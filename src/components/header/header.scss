@@ -3,32 +3,27 @@
 	height: 72px;
 	border-bottom: 1px solid #272e3b;
 
-    &__items { 
-        height: 72px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between; /* Add this line */
+		height: 100%;
 
-    &__item {
-        align-items: center;
-        &--left { 
-            gap: 139px;
-        }
-    }
-    
-    &__information {
-        gap: 32px;
-        &__item {  
-            font-family: Rubik;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-        }
-    }
+		.nav {
+			align-items: center;
+			display: flex;
+			column-gap: 139px;
+			&__list {
+				display: flex;
+				column-gap: 32px;
+			}
+		}
+	}
 
-    &__buttons { 
-        gap: 24px;
-    }
+	&__buttons {
+		display: flex;
+		align-items: center;
+		
+		column-gap: 24px;
+	}
 }
- 

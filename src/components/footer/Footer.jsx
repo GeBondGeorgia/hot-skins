@@ -7,9 +7,9 @@ const Footer = ( ) => {
                 <div className="footer__wrapper">
                     <p className="footer__item">Copyright © Skincash.ru</p>
                     <ul className="footer__items">
-                        <h4 className="footer__item">Помощь</h4>
-                        <h4 className="footer__item">Контакты</h4>
-                        <h4 className="footer__item">Пользовательское соглашение</h4>
+                        <li className="footer__item medium">Помощь</li>
+                        <li className="footer__item medium">Контакты</li>
+                        <li className="footer__item medium">Пользовательское соглашение</li>
                     </ul>
                 </div>
             </div>
