@@ -1,27 +1,35 @@
-:root { 
-    --textColor: #000;
-    --yellow:  #EBD96B;
+:root {
+	--textColor: #fff;
+	--secTextColor: rgba(255, 255, 255, 0.5);
+	--backgroundColor: #20222a;
+	--buttonColor: #f4c038;
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 500;
-  }
+	font-family: "Rubik", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 500;
+	color: var(--textColor);
+	background-color: var(--backgroundColor);
+}
 
-  .container {
-    padding: 0 16px;
-    max-width: 1256px;
-    margin: 0  auto;
-    height: 100%; 
-  }
-  
-  .button {
+.container {
+	padding: 0 16px;
+	max-width: 1256px;
+	margin: 0 auto;
+	height: 100%;
+
+	@media (max-width: 1024px) {
+		max-width: 968px;
+	}
+}
+
+.button {
 	text-align: center;
 	padding: 10px 24px;
 	border-radius: 48px;
-	background-color: #f4c038;
+	background-color: var(--buttonColor);
 	border: none;
 
 	font-size: 16px;
@@ -42,25 +50,26 @@ body {
 		border-radius: 20px;
 		border: 1px solid #3d4554;
 
-		color: white;
+		color: var(--textColor);
 		font-size: 14px;
 		font-weight: 400;
 	}
 }
 
-
-.title { 
+.title {
 	font-weight: 500;
 }
 
 h1.title {
-	font-style: normal;
 	font-weight: 700;
 	line-height: 52px;
+	font-size: 48px;
 
-	&--biggest {
-		font-size: 56px;
-		line-height: 56px;
+	@media (min-width: 1280px) {
+		&--biggest {
+			font-size: 56px;
+			line-height: 56px;
+		}
 	}
 }
 
@@ -71,7 +80,7 @@ h2.title {
 
 h3.title {
 	font-size: 24px;
-	line-height: 32px; 
+	line-height: 32px;
 }
 
 h4.title {
@@ -96,3 +105,59 @@ h4.title {
 	font-weight: 400;
 	line-height: 16px;
 }
+
+.form {
+	display: block;
+
+	&,
+	&__inputs {
+		display: block;
+	}
+
+	&__input {
+		font-weight: 400;
+
+		padding: 16px 24px 16px 24px;
+
+		width: 496px;
+		height: 48px;
+
+		border-radius: 24px;
+		border: 1px solid #3d4554;
+
+		position: relative;
+
+		line-height: 0;
+
+		& + & {
+			margin-top: 24px;
+		}
+
+		&--textarea {
+			height: 104px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 456px;
+		}
+	}
+	&__field {
+		width: 100%;
+		&--textarea {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.input__error-message {
+		position: absolute;
+		line-height: 4;
+		color: rgb(255, 110, 110);
+	}
+}
+
+
+// input[type="submit"].hide, .hide{
+// 	display: none;
+
+
+// }

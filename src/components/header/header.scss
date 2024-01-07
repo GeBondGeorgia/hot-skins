@@ -1,7 +1,7 @@
 .header {
-	background-color: #20222a;
 	height: 72px;
 	border-bottom: 1px solid #272e3b;
+    background: var(--backgroundColor);
 
 	&__wrapper {
 		display: flex;
@@ -12,10 +12,18 @@
 		.nav {
 			align-items: center;
 			display: flex;
-			column-gap: 139px;
+			width: 469px;
+			justify-content: space-between;
+			.logo { 
+				display: flex;
+				justify-content: space-between;
+				width: 173px;
+			}
+
 			&__list {
 				display: flex;
-				column-gap: 32px;
+				width: 156px;
+				justify-content: space-between;
 			}
 		}
 	}

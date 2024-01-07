@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
 
-import logo from "../../assets/logo/mainPage.png";
+import logo from "../../assets/logo/logo.svg";
+import hotSkins from "../../assets/logo/HotSkins.svg";
 import lang from "../../assets/country/russia.png";
 import arrow from "../../assets/country/arrow-down.svg";
 
@@ -13,6 +14,7 @@ const Header = () => {
 					<div className="nav">
 						<a href="#!" className="logo">
 							<img src={logo} alt="logo" />
+							<img src={hotSkins} alt="Hot Skins" />
 						</a>
 
 						<ul className="nav__list">

@@ -56,6 +56,10 @@ input, textarea, button, select {
     font-size: inherit;
     color: inherit;
     background-color: transparent;
+	resize: none;
+	&:focus { 
+		outline: 0;
+	}
 }
 
 input::-ms-clear {
@@ -68,6 +72,7 @@ button, input[type="submit"] {
     // background-color: transparent;
     // background: none;
     cursor: pointer;
+
 }
 
 input:focus, input:active,

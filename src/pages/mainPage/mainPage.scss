@@ -4,12 +4,16 @@
     margin: 0;
     height: 100vh;
     
-    &__promo { 
+    .promo { 
         &__title {  
-            max-width: 624px;
+            width: 624px;
             
             margin-top: 122px;
             margin-bottom: 40px;
+
+            @media (max-width: 1024px) {
+                margin-top: 62px;                
+            }
         }
         &__button, .button {
             padding: 14px 40px;

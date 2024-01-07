@@ -7,8 +7,9 @@ const MainPage = () => {
     return ( 
         <div className="main">
             <Header/>
-            <div className="main__promo">
+            <div className="promo">
 			<div className="container">
+               
 				<h1 className="promo__title title title--biggest">
 					Принимайте платежи от пользователей 
                     <br />

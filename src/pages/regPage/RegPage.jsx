@@ -2,63 +2,59 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 
 import regLogoImg from "../../assets/images/regLogo.svg";
+import checkmark from "../../assets/images/checkmark.png";
 
 import "./regPage.scss";
 import useForm from "../../hooks/useForm";
 
 const RegPage = () => {
-	const [data, dataChange, dataSubmit] = useForm(["name",
-        "email",
-        "siteAdress",
-        "contacts"] );
+	const { dataSubmit, inputGet, checkmarkClassName } = useForm([
+		"name",
+		"email",
+		"siteAdress",
+		"contacts",
+	]);
+
 	return (
 		<div className="reg">
-			<Header />
-			<div className="reg__promo">
-				<div className="promo__img">
-					<img src={regLogoImg} alt="Regestration logo" />
+				<div className={`reg__checkmark ${checkmarkClassName}`}>
+					<img src={checkmark} alt="Checkmark indicating successful registration" />
 				</div>
-				<form  className="form" onSubmit={dataSubmit}>
-					<h2 className="form__title title">Заявка на подключение</h2>
-					<div className="form__inputs">
-						<input
-							type="text medium"
-							onChange={(e) => dataChange(e)}
-							className="form__input"
-							name="name"
-							placeholder="Ваше имя"
+			<Header />
+			<div className="reg__container container">
+				<div className="reg__wrapper">
+					<div className="reg__promo">
+						<img
+							className="reg__img"
+							src={regLogoImg}
+							alt="Regestration logo"
 						/>
-						<input
-							type="email medium"
-							onChange={(e) => dataChange(e)}
-							className="form__input"
-							name="email"
-							placeholder="Ваш email"
-                            
-						/>
-						<input
-							type="text medium"
-							onChange={(e) => dataChange(e)}
-							className="form__input"
-							name="siteAdress"
-							placeholder="Адрес сайта"
-						/>
-						<input
-							type="text medium"
-							onChange={(e) => dataChange(e)}
-							className="form__input"
-							name="contacts"
-							placeholder="Ваши контакты (Телефон, Telegram, WhatsApp...)"
-						/>
+						<div className="form__wrapper">
+							<h2 className="form__title title">
+								Заявка на подключение
+							</h2>
+							<form className="form" onSubmit={dataSubmit}>
+								{
+									inputGet({
+										name: "Ваше имя",
+										email: "Ваш email",
+										siteAdress: "Адрес сайта",
+										contacts: "Ваши контакты (WhatsApp,теле..)",
+									}, {contacts: "form__input--textarea"}, {contacts: "textarea"})
+								}
+
+								<div className="button__wrapper">
+									<input
+										type="submit"
+										value="Отправить заявку"
+										className="button form__button"
+									/>
+								</div>
+							</form>
+
+						</div>
 					</div>
-					<div className="button__wrapper">
-						<input
-							type="submit"
-							value="Отправить заявку"
-							className="button form__button"
-						/>
-					</div>
-				</form>
+				</div>
 			</div>
 			<Footer />
 		</div>
