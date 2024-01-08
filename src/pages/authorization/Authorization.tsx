@@ -3,12 +3,13 @@ import hotSkinsImg from "../../assets/logo/HotSkins.svg";
 import useForm from "../../hooks/useForm";
 
 import "./authorization.scss";
+import { FC } from "react";
 
-const Authorization = () => {
-	const { dataSubmit, inputGet } = useForm(["email", "password"]);
+const Authorization: FC = () => {
+	const { dataSubmit, inputGet } = useForm({ email: "", password: "" });
 
 	return (
-		<div className="authorization" onSubmit={dataSubmit}>
+		<div className="authorization" >
 			<div className="logo">
 				<div className="logo__wrapper">
 					<img src={logoImg} alt="Logo" className="logo__img" />
@@ -21,9 +22,10 @@ const Authorization = () => {
 					/>
 				</div>
 			</div>
-			<form className="form">
-				{inputGet({ email: "Ваш email", password: "Пароль" })}
-				<div className="button__wrapper">
+			<form className="form" onSubmit={dataSubmit}>
+			{inputGet({
+          placeholder: { email: "Ваш email", password: "Пароль" },
+        })}				<div className="button__wrapper">
 					<input
 						type="submit"
 						className="button form__button authorization__button"

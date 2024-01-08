@@ -1,4 +1,5 @@
 // import { Link } from "react-router-dom";
+import { FC } from "react";
 
 import logo from "../../assets/logo/logo.svg";
 import hotSkins from "../../assets/logo/HotSkins.svg";
@@ -6,7 +7,8 @@ import lang from "../../assets/country/russia.png";
 import arrow from "../../assets/country/arrow-down.svg";
 
 import "./header.scss";
-const Header = () => {
+
+const Header: FC = () => {
 	return (
 		<div className="header">
 			<div className="container">

@@ -2,8 +2,9 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 
 import "./mainPage.scss";
+import { FC } from "react";
 
-const MainPage = () => { 
+const MainPage: FC = () => { 
     return ( 
         <div className="main">
             <Header/>
